@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { readGuests, writeGuests } from '@/lib/storage';
+import { updateRsvp } from '@/lib/storage';
 
 export const dynamic = 'force-dynamic';
 
@@ -23,25 +23,21 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: 'id and status required' }, { status: 400 });
   }
 
-  const guests = await readGuests();
-  const idx = guests.findIndex((g) => g.id === body.id);
-  if (idx < 0) {
-    return NextResponse.json({ error: 'guest not found' }, { status: 404 });
-  }
-
   const attendees =
     body.status === 'declined'
       ? 0
       : Math.max(1, Math.min(10, Number(body.attendees ?? 1)));
 
-  guests[idx].rsvp = {
+  const guest = await updateRsvp(body.id, {
     status: body.status,
     attendees,
     dietary: body.dietary?.trim() || undefined,
     message: body.message?.trim() || undefined,
-    confirmedAt: new Date().toISOString(),
-  };
+  });
 
-  await writeGuests(guests);
-  return NextResponse.json({ ok: true, guest: guests[idx] });
+  if (!guest) {
+    return NextResponse.json({ error: 'guest not found' }, { status: 404 });
+  }
+
+  return NextResponse.json({ ok: true, guest });
 }
