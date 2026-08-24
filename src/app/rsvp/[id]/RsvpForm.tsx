@@ -11,7 +11,6 @@ export default function RsvpForm({ guest }: Props) {
   const [status, setStatus] = useState<'attending' | 'declined'>(
     guest.rsvp.status === 'declined' ? 'declined' : 'attending'
   );
-  const [attendees, setAttendees] = useState<number>(guest.rsvp.attendees || 1);
   const [dietary, setDietary] = useState<string>(guest.rsvp.dietary ?? '');
   const [message, setMessage] = useState<string>(guest.rsvp.message ?? '');
   const [submitting, setSubmitting] = useState(false);
@@ -31,7 +30,7 @@ export default function RsvpForm({ guest }: Props) {
         body: JSON.stringify({
           id: guest.id,
           status,
-          attendees: status === 'attending' ? attendees : 0,
+          attendees: 1,
           dietary: dietary || undefined,
           message: message || undefined,
         }),
@@ -97,7 +96,7 @@ export default function RsvpForm({ guest }: Props) {
           <span>
             <span className="block font-medium text-moss-900">Sí, asisto ✨</span>
             <span className="block text-sm text-moss-600">
-              ¡Qué emoción contar con vos!
+              ¡Qué emoción contar con ti!
             </span>
           </span>
         </label>
@@ -121,21 +120,6 @@ export default function RsvpForm({ guest }: Props) {
 
       {status === 'attending' && (
         <>
-          <div>
-            <label htmlFor="attendees" className="block text-sm font-medium text-moss-800 mb-1">
-              ¿Cuántas personas asisten? (incluyéndote)
-            </label>
-            <input
-              id="attendees"
-              type="number"
-              min={1}
-              max={10}
-              value={attendees}
-              onChange={(e) => setAttendees(Math.max(1, Math.min(10, Number(e.target.value) || 1)))}
-              className="w-24 rounded-md border border-sand-300 px-3 py-2"
-            />
-          </div>
-
           <div>
             <label htmlFor="dietary" className="block text-sm font-medium text-moss-800 mb-1">
               Restricciones alimentarias (opcional)

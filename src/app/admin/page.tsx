@@ -34,7 +34,6 @@ export default async function AdminPage({
   const attending = guests.filter((g) => g.rsvp.status === 'attending');
   const declined = guests.filter((g) => g.rsvp.status === 'declined');
   const pending = guests.filter((g) => g.rsvp.status === 'pending');
-  const totalAttendees = attending.reduce((acc, g) => acc + g.rsvp.attendees, 0);
 
   const table = guests.map((g) => {
     const statusColor =
@@ -59,7 +58,7 @@ export default async function AdminPage({
           <h1 className="font-serif text-4xl text-moss-900">RSVP · Mael & Tamara</h1>
           <span className="text-sm text-moss-600">
             {guests.length} invitados ·{' '}
-            {attending.length} confirmaron ({totalAttendees} personas)
+            {attending.length} confirmaron
           </span>
         </header>
 
@@ -75,7 +74,6 @@ export default async function AdminPage({
               <tr>
                 <th className="px-4 py-3">Nombre</th>
                 <th className="px-4 py-3">Estado</th>
-                <th className="px-4 py-3">Personas</th>
                 <th className="px-4 py-3">Restricciones</th>
                 <th className="px-4 py-3">Mensaje</th>
                 <th className="px-4 py-3">Confirmado</th>
@@ -89,9 +87,6 @@ export default async function AdminPage({
                     <span className={`rounded-full px-3 py-1 text-xs ${g.statusColor}`}>
                       {g.statusLabel}
                     </span>
-                  </td>
-                  <td className="px-4 py-3">
-                    {g.rsvp.status === 'attending' ? g.rsvp.attendees : '—'}
                   </td>
                   <td className="px-4 py-3 text-moss-700">
                     {g.rsvp.dietary ?? '—'}
