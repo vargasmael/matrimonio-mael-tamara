@@ -96,7 +96,7 @@ export default function RsvpForm({ guest }: Props) {
           <span>
             <span className="block font-medium text-moss-900">Sí, asisto ✨</span>
             <span className="block text-sm text-moss-600">
-              ¡Qué emoción contar con ti!
+              ¡Qué emoción contar contigo!
             </span>
           </span>
         </label>
