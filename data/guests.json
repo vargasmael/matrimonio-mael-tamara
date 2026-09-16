@@ -1089,5 +1089,15 @@
       "attendees": 1,
       "confirmedAt": null
     }
+  },
+  {
+    "id": "danilo-balboa",
+    "name": "Danilo Balboa",
+    "normalized": "danilo balboa",
+    "rsvp": {
+      "status": "pending",
+      "attendees": 1,
+      "confirmedAt": null
+    }
   }
 ]
