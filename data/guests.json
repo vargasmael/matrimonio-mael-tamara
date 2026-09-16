@@ -564,9 +564,10 @@
     "name": "Javier Balboa",
     "normalized": "javier balboa",
     "rsvp": {
-      "status": "pending",
+      "status": "attending",
       "attendees": 1,
-      "confirmedAt": null
+      "message": "QUE VIVAN LOS NOVIOS!!!!",
+      "confirmedAt": "2026-09-16T19:55:53.907Z"
     }
   },
   {
