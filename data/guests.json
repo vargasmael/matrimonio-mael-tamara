@@ -64,9 +64,9 @@
     "name": "Derek Fernandez",
     "normalized": "derek fernandez",
     "rsvp": {
-      "status": "attending",
+      "status": "pending",
       "attendees": 1,
-      "confirmedAt": "2026-08-24T00:00:00.000Z"
+      "confirmedAt": null
     }
   },
   {
