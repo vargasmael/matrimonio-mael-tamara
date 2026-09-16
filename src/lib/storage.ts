@@ -18,12 +18,13 @@ export type Guest = {
   rsvp: Rsvp;
 };
 
-const DATA_DIR = path.join(process.cwd(), 'data');
+const DATA_DIR = process.env.RSVP_DATA_DIR ?? path.join(process.cwd(), 'data');
 const GUESTS_FILE = path.join(DATA_DIR, 'guests.json');
 
 // Supabase opcional: si están las env vars, usamos Supabase.
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_KEY = process.env.SUPABASE_ANON_KEY;
+const IS_VERCEL = Boolean(process.env.VERCEL);
 
 async function readJson(): Promise<Guest[]> {
   try {
@@ -80,20 +81,35 @@ function rowToGuest(row: SupabaseRow): Guest {
   };
 }
 
+function logSupabaseFallback(operation: string, error: unknown): void {
+  console.error(
+    `RSVP_STORAGE_FALLBACK ${operation}`,
+    error instanceof Error ? error.message : String(error),
+  );
+}
+
 export async function readGuests(): Promise<Guest[]> {
   if (usingSupabase) {
-    const rows = (await sbFetch('guests?select=*')) as SupabaseRow[];
-    return rows.map(rowToGuest);
+    try {
+      const rows = (await sbFetch('guests?select=*')) as SupabaseRow[];
+      return rows.map(rowToGuest);
+    } catch (error) {
+      logSupabaseFallback('readGuests', error);
+    }
   }
   return readJson();
 }
 
 export async function findGuestById(id: string): Promise<Guest | undefined> {
   if (usingSupabase) {
-    const rows = (await sbFetch(
-      `guests?id=eq.${encodeURIComponent(id)}&select=*&limit=1`,
-    )) as SupabaseRow[];
-    return rows[0] ? rowToGuest(rows[0]) : undefined;
+    try {
+      const rows = (await sbFetch(
+        `guests?id=eq.${encodeURIComponent(id)}&select=*&limit=1`,
+      )) as SupabaseRow[];
+      return rows[0] ? rowToGuest(rows[0]) : undefined;
+    } catch (error) {
+      logSupabaseFallback('findGuestById', error);
+    }
   }
   const guests = await readJson();
   return guests.find((g) => g.id === id);
@@ -111,19 +127,39 @@ export async function updateRsvp(
     confirmedAt: new Date().toISOString(),
   };
   if (usingSupabase) {
-    await sbFetch(`guests?id=eq.${encodeURIComponent(id)}`, {
-      method: 'PATCH',
-      headers: { Prefer: 'return=representation' },
-      body: JSON.stringify({ rsvp: merged }),
-    });
-    return findGuestById(id);
+    try {
+      await sbFetch(`guests?id=eq.${encodeURIComponent(id)}`, {
+        method: 'PATCH',
+        headers: { Prefer: 'return=representation' },
+        body: JSON.stringify({ rsvp: merged }),
+      });
+      return findGuestById(id);
+    } catch (error) {
+      logSupabaseFallback('updateRsvp', error);
+    }
   }
   const guests = await readJson();
   const idx = guests.findIndex((g) => g.id === id);
   if (idx === -1) return undefined;
-  guests[idx] = { ...guests[idx], rsvp: merged };
-  await writeJson(guests);
-  return guests[idx];
+  const updatedGuest = { ...guests[idx], rsvp: merged };
+  guests[idx] = updatedGuest;
+  try {
+    await writeJson(guests);
+  } catch (error) {
+    console.warn(
+      `RSVP_FALLBACK_CAPTURE ${JSON.stringify({
+        id,
+        status: merged.status,
+        attendees: merged.attendees,
+        dietary: merged.dietary ?? null,
+        message: merged.message ?? null,
+        confirmedAt: merged.confirmedAt,
+        storageError: error instanceof Error ? error.message : String(error),
+        vercel: IS_VERCEL,
+      })}`,
+    );
+  }
+  return updatedGuest;
 }
 
 export async function insertMany(guests: Guest[]): Promise<void> {
