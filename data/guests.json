@@ -1095,9 +1095,11 @@
     "name": "Danilo Balboa",
     "normalized": "danilo balboa",
     "rsvp": {
-      "status": "pending",
+      "status": "attending",
       "attendees": 1,
-      "confirmedAt": null
+      "dietary": "ninguna",
+      "message": "piensalo...",
+      "confirmedAt": "2026-09-16T21:04:22.881Z"
     }
   }
 ]
