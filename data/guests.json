@@ -544,9 +544,9 @@
     "name": "Jose Balboa",
     "normalized": "jose balboa",
     "rsvp": {
-      "status": "pending",
+      "status": "attending",
       "attendees": 1,
-      "confirmedAt": null
+      "confirmedAt": "2026-09-16T20:28:51.686Z"
     }
   },
   {
