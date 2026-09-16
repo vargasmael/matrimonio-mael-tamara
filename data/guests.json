@@ -466,7 +466,9 @@
     "rsvp": {
       "status": "attending",
       "attendees": 1,
-      "confirmedAt": "2026-08-24T00:00:00.000Z"
+      "dietary": "Sin lactosa",
+      "message": "Muchas felicidades, los amo ❤️",
+      "confirmedAt": "2026-09-16T21:07:31.182Z"
     }
   },
   {
