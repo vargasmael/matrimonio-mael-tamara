@@ -641,9 +641,10 @@
     "name": "Axel Morales",
     "normalized": "axel morales",
     "rsvp": {
-      "status": "pending",
+      "status": "attending",
       "attendees": 1,
-      "confirmedAt": null
+      "message": "Los quiero 🫶🏻😍",
+      "confirmedAt": "2026-10-08T13:22:10.663Z"
     }
   },
   {
