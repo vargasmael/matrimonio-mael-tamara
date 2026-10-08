@@ -857,9 +857,10 @@
     "name": "Rodrigo Gallardo",
     "normalized": "rodrigo gallardo",
     "rsvp": {
-      "status": "pending",
+      "status": "attending",
       "attendees": 1,
-      "confirmedAt": null
+      "message": "Hermosa noticia! Nos alegramos mucho por ustedes! Muchas felicidades por el lindo paso que dieron, les deseamos mucho amor y felicidad!",
+      "confirmedAt": "2026-10-08T14:15:23.051Z"
     }
   },
   {
