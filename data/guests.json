@@ -763,9 +763,10 @@
     "name": "Ivy Hormazabal",
     "normalized": "ivy hormazabal",
     "rsvp": {
-      "status": "pending",
+      "status": "attending",
       "attendees": 1,
-      "confirmedAt": null
+      "message": "Los queremos muchos, muchas gracias por considerarnos para compartir con ustedes este momento tan bello, abrazos",
+      "confirmedAt": "2026-10-08T14:55:58.494Z"
     }
   },
   {
