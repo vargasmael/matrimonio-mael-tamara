@@ -1116,5 +1116,85 @@
       "message": "piensalo...",
       "confirmedAt": "2026-09-16T21:04:22.881Z"
     }
+  },
+  {
+    "id": "sebastian",
+    "name": "Sebastian ",
+    "normalized": "sebastian",
+    "rsvp": {
+      "status": "pending",
+      "attendees": 1,
+      "confirmedAt": null
+    }
+  },
+  {
+    "id": "esposa-manolo",
+    "name": "esposa manolo",
+    "normalized": "esposa manolo",
+    "rsvp": {
+      "status": "pending",
+      "attendees": 1,
+      "confirmedAt": null
+    }
+  },
+  {
+    "id": "ximena",
+    "name": "Ximena",
+    "normalized": "ximena",
+    "rsvp": {
+      "status": "pending",
+      "attendees": 1,
+      "confirmedAt": null
+    }
+  },
+  {
+    "id": "pablo",
+    "name": "Pablo",
+    "normalized": "pablo",
+    "rsvp": {
+      "status": "pending",
+      "attendees": 1,
+      "confirmedAt": null
+    }
+  },
+  {
+    "id": "scarlet",
+    "name": "Scarlet",
+    "normalized": "scarlet",
+    "rsvp": {
+      "status": "pending",
+      "attendees": 1,
+      "confirmedAt": null
+    }
+  },
+  {
+    "id": "freddy-urrutia",
+    "name": "Freddy Urrutia",
+    "normalized": "freddy urrutia",
+    "rsvp": {
+      "status": "pending",
+      "attendees": 1,
+      "confirmedAt": null
+    }
+  },
+  {
+    "id": "martita-fernandez",
+    "name": "Martita Fernandez",
+    "normalized": "martita fernandez",
+    "rsvp": {
+      "status": "pending",
+      "attendees": 1,
+      "confirmedAt": null
+    }
+  },
+  {
+    "id": "roberto",
+    "name": "Roberto",
+    "normalized": "roberto",
+    "rsvp": {
+      "status": "pending",
+      "attendees": 1,
+      "confirmedAt": null
+    }
   }
 ]
