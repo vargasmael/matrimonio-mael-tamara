@@ -194,9 +194,11 @@
     "name": "Naty Urrutia",
     "normalized": "naty urrutia",
     "rsvp": {
-      "status": "pending",
+      "status": "attending",
       "attendees": 1,
-      "confirmedAt": null
+      "dietary": "Alergia al camarón",
+      "message": "Primitos, gracias por hacernos parte de este lindo momento!!!! ❤️\nQue vivan los novios!!!!",
+      "confirmedAt": "2026-10-08T13:20:15.014Z"
     }
   },
   {
