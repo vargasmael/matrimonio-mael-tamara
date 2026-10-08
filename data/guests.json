@@ -802,9 +802,11 @@
     "name": "Roberto Rojas",
     "normalized": "roberto rojas",
     "rsvp": {
-      "status": "pending",
+      "status": "attending",
       "attendees": 1,
-      "confirmedAt": null
+      "dietary": "Alérgico a los crustáceos",
+      "message": "Los quiero mucho !",
+      "confirmedAt": "2026-10-08T13:30:10.178Z"
     }
   },
   {
