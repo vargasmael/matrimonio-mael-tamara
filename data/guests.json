@@ -815,9 +815,11 @@
     "name": "Rosita Gonzalez",
     "normalized": "rosita gonzalez",
     "rsvp": {
-      "status": "pending",
+      "status": "attending",
       "attendees": 1,
-      "confirmedAt": null
+      "dietary": "Ninguna",
+      "message": "Estamos muy felices  por los cuatro,los queremos mucho",
+      "confirmedAt": "2026-10-08T13:49:24.565Z"
     }
   },
   {
