@@ -1163,9 +1163,10 @@
     "name": "Scarlet",
     "normalized": "scarlet",
     "rsvp": {
-      "status": "pending",
+      "status": "attending",
       "attendees": 1,
-      "confirmedAt": null
+      "message": "LA NOVIA DE ALEJANDRO EL QUE QUIERE CANTARLES EL AVE MARIA O UNA METALERA JAJAJA",
+      "confirmedAt": "2026-10-08T16:48:00.328Z"
     }
   },
   {
