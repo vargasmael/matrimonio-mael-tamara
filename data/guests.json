@@ -428,9 +428,10 @@
     "name": "Alejandro Espinoza",
     "normalized": "alejandro espinoza",
     "rsvp": {
-      "status": "pending",
+      "status": "attending",
       "attendees": 1,
-      "confirmedAt": null
+      "message": "LOS AMO Y SI QUIEREN LES CANTO EL AVE MARIA O UNA METALERA JAJAJAJA",
+      "confirmedAt": "2026-10-08T16:47:29.914Z"
     }
   },
   {
