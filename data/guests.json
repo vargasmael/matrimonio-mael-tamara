@@ -367,9 +367,10 @@
     "name": "Maria Eugenia Valdes Urrutia",
     "normalized": "maria eugenia valdes urrutia",
     "rsvp": {
-      "status": "pending",
+      "status": "attending",
       "attendees": 1,
-      "confirmedAt": null
+      "message": "Que alegría y que noticia más linda claro que iremos con mi mamá y Pablo. Muchas felidades hermosa familia.",
+      "confirmedAt": "2026-10-08T16:05:08.216Z"
     }
   },
   {
