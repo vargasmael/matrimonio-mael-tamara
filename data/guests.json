@@ -581,9 +581,10 @@
     "name": "Catalina Silva",
     "normalized": "catalina silva",
     "rsvp": {
-      "status": "pending",
+      "status": "attending",
       "attendees": 1,
-      "confirmedAt": null
+      "message": "Me gusta comer de todo y mucho jajaja los quiero 💙",
+      "confirmedAt": "2026-10-08T13:31:29.751Z"
     }
   },
   {
