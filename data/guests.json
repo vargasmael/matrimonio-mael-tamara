@@ -165,9 +165,10 @@
     "name": "Victor Urrutia",
     "normalized": "victor urrutia",
     "rsvp": {
-      "status": "pending",
+      "status": "attending",
       "attendees": 1,
-      "confirmedAt": null
+      "message": "Muchas. Muchas felicidades.",
+      "confirmedAt": "2026-10-09T20:03:33.626Z"
     }
   },
   {
