@@ -409,9 +409,10 @@
     "name": "Natalie Marin",
     "normalized": "natalie marin",
     "rsvp": {
-      "status": "pending",
+      "status": "attending",
       "attendees": 1,
-      "confirmedAt": null
+      "message": "Mis niños el mejor de los éxitos y muchas bendiciones. Los quiero mucho 💕",
+      "confirmedAt": "2026-10-13T02:08:24.673Z"
     }
   },
   {
