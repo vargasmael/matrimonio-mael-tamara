@@ -707,9 +707,9 @@
     "name": "Carla Contreras",
     "normalized": "carla contreras",
     "rsvp": {
-      "status": "pending",
+      "status": "attending",
       "attendees": 1,
-      "confirmedAt": null
+      "confirmedAt": "2026-10-13T16:44:01.944Z"
     }
   },
   {
