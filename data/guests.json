@@ -419,9 +419,9 @@
     "name": "Marcelo Aburto",
     "normalized": "marcelo aburto",
     "rsvp": {
-      "status": "pending",
+      "status": "attending",
       "attendees": 1,
-      "confirmedAt": null
+      "confirmedAt": "2026-10-13T02:07:18.839Z"
     }
   },
   {
