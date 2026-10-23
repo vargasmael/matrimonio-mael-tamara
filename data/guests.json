@@ -145,9 +145,10 @@
     "name": "Diego Galleguillos",
     "normalized": "diego galleguillos",
     "rsvp": {
-      "status": "pending",
+      "status": "attending",
       "attendees": 1,
-      "confirmedAt": null
+      "message": "Queridos Mael y Tamy:\nUnen sus caminos para siempre y no puedo estar mas feliz por ustedes son una pareja increible y se nota el amor tan lindo que se tienen.\nQue este matrimonio este lleno de sueños cumplidos de apoyo mutuo y de un amor que crezca cada dia mas que nunca les falte la risa la complicidad y las ganas de seguir construyendo juntos.\nFelicidades en este hermoso paso se lo merecen todo les mando un abrazo gigante con mucho cariño.\nDiego y Joselyn",
+      "confirmedAt": "2026-10-23T13:23:04.600Z"
     }
   },
   {
