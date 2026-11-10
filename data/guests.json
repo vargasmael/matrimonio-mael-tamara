@@ -607,9 +607,9 @@
     "name": "Walther Withing",
     "normalized": "walther withing",
     "rsvp": {
-      "status": "pending",
+      "status": "attending",
       "attendees": 1,
-      "confirmedAt": null
+      "confirmedAt": "2026-11-10T16:56:59.156Z"
     }
   },
   {
