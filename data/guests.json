@@ -1095,9 +1095,10 @@
     "name": "Cristobal Arancibia",
     "normalized": "cristobal arancibia",
     "rsvp": {
-      "status": "pending",
+      "status": "attending",
       "attendees": 1,
-      "confirmedAt": null
+      "message": "Muy yico!",
+      "confirmedAt": "2026-11-16T22:02:31.587Z"
     }
   },
   {
